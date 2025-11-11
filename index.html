@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>حسن آباد بیدکان - روستای زیبای فارس</title>
+    <meta name="description" content="حسن آباد بیدکان، یکی از زیباترین و آرام‌ترین روستاهای شهرستان بیدکان در استان فارس، با طبیعت بکر، فرهنگ غنی و صنایع دستی منحصر به فرد.">
+    <meta name="keywords" content="حسن آباد بیدکان, گردشگری فارس, گردشگری بیدکان, روستای حسن آباد, جاذبه‌های طبیعی بیدکان, صنایع دستی حسن آباد">
+    <meta name="author" content="حسن آباد بیدکان">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #e0f7fa, #f1f8e9);
+            color: #2c3e50;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            text-align: center;
+            padding: 40px 20px;
+            background: linear-gradient(90deg, #2c3e50, #34495e);
+            color: white;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .subtitle {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+        
+        .intro {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+        
+        .intro h2 {
+            color: #27ae60;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 10px;
+        }
+        
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin-bottom: 30px;
+        }
+        
+        .feature-card {
+            background: white;
+            border-radius: 10px;
+            padding: 25px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .feature-card h3 {
+            color: #2980b9;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .gallery {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+        
+        .gallery h2 {
+            color: #27ae60;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 10px;
+        }
+        
+        .image-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+        }
+        
+        .image-item {
+            height: 200px;
+            background: #eee;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .image-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .image-item .caption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(0,0,0,0.7);
+            color: white;
+            padding: 5px;
+            text-align: center;
+            font-size: 0.9rem;
+        }
+        
+        .culture {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+        
+        .culture h2 {
+            color: #27ae60;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 10px;
+        }
+        
+        .culture-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+        }
+        
+        .culture-item {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            border-right: 4px solid #27ae60;
+        }
+        
+        .culture-item h4 {
+            color: #2980b9;
+            margin-bottom: 10px;
+        }
+        
+        .location-section {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+        
+        .location-section h2 {
+            color: #27ae60;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 10px;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #2c3e50;
+            color: white;
+            border-radius: 10px;
+            margin-top: 30px;
+        }
+        
+        .location {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 10px;
+        }
+        
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+            
+            .features, .culture-content {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>حسن آباد بیدکان</h1>
+            <p class="subtitle">روستایی زیبا و تاریخی در دل کوه‌های بیدکان</p>
+        </header>
+        
+        <section class="intro">
+            <h2>درباره حسن آباد بیدکان</h2>
+            <p>حسن آباد بیدکان یکی از زیباترین و آرام‌ترین روستاهای شهرستان بیدکان در استان فارس است که در دل طبیعت سرسبز و با هوای پاک قرار گرفته است. این روستا با جمعیتی حدود ۲۰۰۰ نفر، دارای تاریخچه غنی و فرهنگ منحصر به فردی است که تاکنون توانسته با حفظ سنت‌های خود، همزیستی صلح‌آمیزی با طبیعت داشته باشد.</p>
+            <p>مردم حسن آباد بیشتر به کشاورزی، دامداری و صنایع دستی مشغول هستند. این منطقه به خاطر میوه‌های تازه، عسل طبیعی و صنایع دستی منحصر به فردش شناخته شده است.</p>
+        </section>
+        
+        <section class="features">
+            <div class="feature-card">
+                <h3><span>美景</span> طبیعت بکر حسن آباد</h3>
+                <p>حسن آباد بیدکان با قرار گرفتن در میان کوه‌های سرسبز و جنگل‌های انبوه، دارای مناظر طبیعی بکر و زیبایی است که هر ساله میزبان گردشگران زیادی است.</p>
+            </div>
+            
+            <div class="feature-card">
+                <h3><span>تاریخ</span> تاریخ غنی منطقه</h3>
+                <p>این منطقه دارای آثار تاریخی متعددی است که نشان از سکونت اقوام قدیمی در این منطقه دارد. موزه کوچک روستا نیز نمونه‌هایی از ابزارهای قدیمی و لباس‌های سنتی را نگهداری می‌کند.</p>
+            </div>
+            
+            <div class="feature-card">
+                <h3><span>فرهنگ</span> فرهنگ منحصر به فرد</h3>
+                <p>مردم حسن آباد دارای فرهنگ غنی و سنت‌های پر رنگی هستند. جشن‌های محلی، موسیقی سنتی و صنایع دستی از جمله ویژگی‌های فرهنگی این منطقه است.</p>
+            </div>
+        </section>
+        
+        <section class="gallery">
+            <h2>گالری تصاویر حسن آباد</h2>
+            <div class="image-grid">
+                <div class="image-item">
+                    <img src="https://placehold.co/300x200/4CAF50/white?text=مناظر+حسن+آباد" alt="View of Hassan Abad Bidkan">
+                    <div class="caption">مناظر زیبای حسن آباد بیدکان</div>
+                </div>
+                <div class="image-item">
+                    <img src="https://placehold.co/300x200/2196F3/white?text=کوه‌های+بیدکان" alt="Mountains around Hassan Abad">
+                    <div class="caption">کوه‌های سرسبز اطراف بیدکان</div>
+                </div>
+                <div class="image-item">
+                    <img src="https://placehold.co/300x200/FF9800/white?text=رودخانه+روستا" alt="Village river">
+                    <div class="caption">رودخانه خوش آب و هوای حسن آباد</div>
+                </div>
+                <div class="image-item">
+                    <img src="https://placehold.co/300x200/9C27B0/white?text=صنایع+دستی" alt="Handicrafts">
+                    <div class="caption">صنایع دستی محلی حسن آباد</div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="culture">
+            <h2>فرهنگ و سنت‌های حسن آباد</h2>
+            <div class="culture-content">
+                <div class="culture-item">
+                    <h4>جشنواره‌های محلی</h4>
+                    <p>هر ساله در فصل بهار جشنواره "گل و برگ" در حسن آباد برگزار می‌شود که در آن مردم با پوشیدن لباس‌های سنتی و اجرای موسیقی محلی، به مناسبت رشد طبیعت جشن می‌گیرند.</p>
+                </div>
+                
+                <div class="culture-item">
+                    <h4>غذاهای محلی</h4>
+                    <p>غذاهای محلی این منطقه از جمله "کوفته کوهپایه" و "آش دیزی حسن آبادی" معروف هستند که با مواد اولیه طبیعی و روش‌های سنتی تهیه می‌شوند.</p>
+                </div>
+                
+                <div class="culture-item">
+                    <h4>صنایع دستی</h3>
+                    <p>دستبافی، چوب‌بری و سفال‌گری از جمله صنایع دستی رایج در حسن آباد است که نمونه‌های آن در بازارهای محلی و برای گردشگران عرضه می‌شود.</p>
+                </div>
+            </div>
+        </section>
+        
+        <section class="location-section">
+            <h2>آدرس و موقعیت حسن آباد بیدکان</h2>
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3475.218288338445!2d52.456789!3d30.567890!2m3!1f0!3f0!4f13.1!3m2!1i1024!2i768!4f13.1!3m1!4b1!4m5!1s0x3f8b9e9a8b9c0d0f%3A0x1234567890abcdef!2sحسن%20آباد%2C%20Bidkan%2C%20Fars%2C%20Iran!3m2!1d30.56789!2d52.456789!5e0!3m2!1sen!2s!4v1712345678901!5m2!1sen!2s" 
+                width="100%" 
+                height="300" 
+                style="border:0; border-radius:10px;" 
+                allowfullscreen="" 
+                loading="lazy">
+            </iframe>
+        </section>
+        
+        <footer>
+            <p>حسن آباد بیدکان - گوهری پنهان در دل طبیعت</p>
+            <div class="location">
+                <span>📍 ایران، استان فارس، شهرستان بیدکان</span>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        // Add simple animation to feature cards on scroll
+        document.addEventListener('DOMContentLoaded', function() {
+            const featureCards = document.querySelectorAll('.feature-card');
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = 1;
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, { threshold: 0.1 });
+            
+            featureCards.forEach(card => {
+                card.style.opacity = 0;
+                card.style.transform = 'translateY(20px)';
+                card.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+                observer.observe(card);
+            });
+            
+            // Add click effect to gallery images
+            const images = document.querySelectorAll('.image-item');
+            images.forEach(img => {
+                img.addEventListener('click', function() {
+                    alert('این تصویر نمایشی است. برای مشاهده تصاویر واقعی، لطفاً با ما تماس بگیرید.');
+                });
+            });
+        });
+    </script>
+</body>
+</html>
+
